@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import AddShop from './components/AddShop';
+import SearchShop from './components/SearchShop';
+import Delete from './components/Delete';
+import ViewShop from './components/ViewShop';
+import NavBar from './components/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/'element={<AddShop/>}/>
+      <Route path='/search'element={<SearchShop/>}/>
+      <Route path='/delete'element={<Delete/>}/>
+      <Route path='/view'element={<ViewShop/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
