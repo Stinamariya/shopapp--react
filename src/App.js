@@ -6,17 +6,13 @@ import Delete from './components/Delete';
 import ViewShop from './components/ViewShop';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ViewProduct from './components/ViewProduct';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path='/'element={<AddShop/>}/>
-      <Route path='/search'element={<SearchShop/>}/>
-      <Route path='/delete'element={<Delete/>}/>
-      <Route path='/view'element={<ViewShop/>}/>
-    </Routes>
-    </BrowserRouter>
+    <div>
+      <ViewProduct/>
+    </div>
   );
 }
 
